@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Footer from './layouts/footer';
+import Home from './pages/home';
+import RegisterReceipt from './pages/registerReceipt';
+import PageNotFound from './pages/pageNotFound';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/register-receipt" element={<RegisterReceipt />} />
+        <Route path="/page-not-found" element={<PageNotFound />} />
+        <Route path="*" element={<Navigate to="page-not-found" />} />
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }

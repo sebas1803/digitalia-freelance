@@ -45,15 +45,15 @@ function ReceiptForm() {
         // download url
         getDownloadURL(uploadTask.snapshot.ref).then((url) => {
           console.log("URL image", url);
-          setLogoUrlUploaded(url);
+          callback(url);
         });
       }
     );
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    handleUpload();
+  event.preventDefault();
+  handleUpload((logoUrlUploaded) => {
     const receipt = {
       logoURL: logoUrlUploaded,
       currency: form.currency,
@@ -72,7 +72,8 @@ function ReceiptForm() {
     setReceipt(receipt);
     setDisplayReceipt(true);
     event.target.reset();
-  }
+  });
+}
 
   const handleBackToForm = () => {
     setDisplayReceipt(false);

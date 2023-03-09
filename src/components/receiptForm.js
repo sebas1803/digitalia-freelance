@@ -10,7 +10,7 @@ function ReceiptForm() {
   const [form, setForm] = useState({})
   const [receipt, setReceipt] = useState(null);
   const [displayReceipt, setDisplayReceipt] = useState(false);
-  const [logoUrlUploaded, setLogoUrlUploaded] = useState(null);
+  //const [logoUrlUploaded, setLogoUrlUploaded] = useState(null);
   // eslint-disable-next-line
   const [percent, setPercent] = useState(0);
 

@@ -66,3 +66,25 @@ footer {
   margin-top: 15px;
   text-align: center;
 }
+
+.receipt-pdf-container {
+  text-align: center;
+}
+
+.receipt-container {
+  border-radius: 10px;
+  border: 1px solid black !important;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.back-button {
+  text-align: center;
+}
+
+.description-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

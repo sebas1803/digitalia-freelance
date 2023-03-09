@@ -21,7 +21,7 @@ function ReceiptForm() {
     })
   }
 
-  function handleUpload() {
+  function handleUpload(callback) {
     const metadata = {
       contentType: 'image/png',
     };
